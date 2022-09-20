@@ -3,11 +3,7 @@ const fs=require("fs");
 let homecontent="";
 let projectcontent="";
 let registrationcontent="";
-var port = require("minimist")(process.argv.slice(2), {
-    default: {
-      greeting: "Hello",
-    },
-   });
+let args = require("minimist")(process.argv.slice(2));
 fs.readFile("home.html",(err,home)=>{
     if(err){ throw err};
     homecontent=home;
@@ -57,6 +53,6 @@ http.createServer((req,res)=>{
         res.end();
     }*/
         
-}).listen(port);
+}).listen(args.port);
 
 
