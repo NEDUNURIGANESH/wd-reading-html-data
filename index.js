@@ -3,7 +3,7 @@ const fs=require("fs");
 let homecontent="";
 let projectcontent="";
 let registrationcontent="";
-let port = require("minimist")(process.argv.slice(2), {
+var port = require("minimist")(process.argv.slice(2), {
     default: {
       greeting: "Hello",
     },
